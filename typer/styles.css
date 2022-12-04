@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "CascadiaCode";
+  src: url("CascadiaCode.woff2") format("woff2");
+}
+html {
+  font-family: "CascadiaCode";
+  color: #e8eaed;
+  background: #202124;
+}
+
+body::-webkit-scrollbar {
+  width: 2.26928895612708vh;
+}
+
+body::-webkit-scrollbar-track {
+  background: #202124;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
