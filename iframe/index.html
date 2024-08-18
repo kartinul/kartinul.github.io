@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFrameViewer</title>
     <script>
+        const urlParams = new URLSearchParams(queryString);
         const iframeLink = urlParams.get('link');
         console.log(iframeLink);
         document.getElementById("if").src = iframeLink;
