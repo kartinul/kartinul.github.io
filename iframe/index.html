@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,37 @@
     <script>
         window.addEventListener('load', function () {
             const queryString = window.location.search;
-        console.log(queryString);
-        const urlParams = new URLSearchParams(queryString);
-        const iframeLink = urlParams.get('link');
-        console.log(iframeLink);
-        document.getElementById("if").src = iframeLink;
-})      
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const iframeLink = urlParams.get('link');
+            console.log(iframeLink);
+            document.getElementById("if").src = iframeLink;
+        })      
     </script>
+    <style>
+        body {
+            margin: 0;
+            /* Remove default margin */
+        }
+
+        iframe {
+            display: block;
+            /* iframes are inline by default */
+            height: 100vh;
+            /* Set height to 100% of the viewport height */
+            width: 100vw;
+            /* Set width to 100% of the viewport width */
+            border: none;
+            /* Remove default border */
+            background: lightyellow;
+            /* Just for styling */
+        }
+    </style>
 </head>
+
 <body>
-    <iframe id="if" src="" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    <iframe id="if" src="" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true"
+        mozallowfullscreen="true"></iframe>
 </body>
+
 </html>
