@@ -40,15 +40,18 @@ function chunkArray(arr, size = 12) {
 }
 
 async function submitPoll(delay) {
-  document.querySelector('.x78zum5.x6s0dn4.xl56j7k.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1f6kntn.xk50ysn.x7o08j2.xtvhhri.x1rluvsa.x14yjl9h.xudhj91.x18nykt9.xww2gxu.xu306ak.xwwtwea.x1gfkgh9.x1247r65.xng8ra.x1cb1t30.x1ys307a.xs2xxs2.x1d8287x').click();
-  await new Promise(r => setTimeout(r, delay));
+document.querySelector('span[data-icon="send"]').click()
+    await new Promise(r => setTimeout(r, delay));
 }
 
 async function newPoll(delay) {
-  document.querySelector('.x100vrsf.x1vqgdyp.x78zum5.x6s0dn4').childNodes[0].click();
+document.querySelector('span[data-icon="plus"]').click()
   await new Promise(r => setTimeout(r, delay));
 
-  document.querySelectorAll('.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.x1nhvcw1.x1q0g3np.x6s0dn4.x1ypdohk.x1vqgdyp.x13fj5qh.x1dqj196')[5].click();
+    const xpath = "//span[text()='Poll']";
+const pollSpan = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+  pollSpan.click();
   await new Promise(r => setTimeout(r, delay));
 }
 
