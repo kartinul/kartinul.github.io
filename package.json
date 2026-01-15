@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "pnpm install --frozen-lockfile && pnpm run build"
+    "predeploy": "npm i && pnpm run build"
   },
   "dependencies": {
     "firebase": "^12.8.0",
