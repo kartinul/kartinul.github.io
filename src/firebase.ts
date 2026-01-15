@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, isSupported, type Analytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC_b0nTQcXlszmNmvIk9zBOyOg9buM48aM",
@@ -11,6 +11,15 @@ const firebaseConfig = {
   measurementId: "G-N6P52Z5HQX",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const app = initializeApp(firebaseConfig);
+
+// Explicit type so TS doesn’t cry
+export let analytics: Analytics | undefined;
+
+if (typeof window !== "undefined") {
+  isSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  });
+}
