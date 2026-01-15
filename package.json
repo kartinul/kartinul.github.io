@@ -9,11 +9,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm i && pnpm run build"
+    "predeploy": "npm i && npm run build"
   },
   "dependencies": {
     "firebase": "^12.8.0",
-    "kartinul.github.io": "link:",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
