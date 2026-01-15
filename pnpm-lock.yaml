@@ -11,6 +11,9 @@ importers:
       firebase:
         specifier: ^12.8.0
         version: 12.8.0
+      kartinul.github.io:
+        specifier: 'link:'
+        version: 'link:'
       react:
         specifier: ^19.2.0
         version: 19.2.3
