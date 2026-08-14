@@ -37,8 +37,8 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#documentation-icon"></use>
           </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
+          <h2>test test test</h2>
+          <p>tatatatatata</p>
           <ul>
             <li>
               <a href="https://vite.dev/" target="_blank">
