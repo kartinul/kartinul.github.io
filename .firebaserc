@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "kartik-nul"
-  }
+  },
+  "targets": {
+    "kartik-nul": {
+      "hosting": {
+        "website": [
+          "kartinul"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
